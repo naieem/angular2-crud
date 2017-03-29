@@ -1,0 +1,26 @@
+<h1>
+    name:{{name}}
+</h1>
+<h1>title:{{title}}</h1>
+<p>Informations</p>
+name:
+<h1>{{hello.name}}</h1>
+age:
+<h1>{{hello.age}}</h1>
+<input type="button" value="{{showUsers ? 'HideUsers' : 'Show Users'}}" (click)="toggleUser()">
+<ul *ngIf="showUsers">
+    <li *ngFor="let user of users">
+        {{user}}
+    </li>
+</ul>
+<form>
+    <label>Add new users</label>
+    <input type="text" #user>
+    <input type="button" value="add" (click)="addUser(user.value)">
+</form>
+<ul>
+    <li *ngFor="let post of posts">
+        {{post.title}}
+        <h1>{{post.body}}</h1>
+    </li>
+</ul>
